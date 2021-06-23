@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +11,9 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Proyecto ISW Herramientas (ft. Tutos)</title>
 
-    <audio src="audio/gang.mp3" autoplay id="musica"></audio>
-    <script>
-        var audio = document.getElementById("musica");
-        audio.volume = 0.05;
-    </script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
 
 </head>
 <body>
@@ -57,23 +56,21 @@
                     <td>Disponible</td>
                     <td>27</td>
                     <td>
-                        <button onclick="location.href='https://www.google.com/search?q=tutos&rlz=1C1CHBF_esCL871CL871&sxsrf=ALeKk02EcTNaffTOJianGPIERCzqqHN92g:1623793761286&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi1wtGSz5rxAhV2ILkGHXk0AIEQ_AUoAXoECAEQAw&biw=1920&bih=937'" class="botoncito">Solicitar</button>
-                    </td>  
+                        <button type="button" class="botoncito" data-bs-toggle="modal" data-bs-target="#ModalFormulario" data-bs-whatever="Tutos para niños">Solicitar</button>                    </td>  
                 </tr>
                 <tr>
                     <td>Ulti jett</td>
                     <td>Disponible</td>
                     <td>1</td>
                     <td>
-                        <button onclick="location.href='https://img.redbull.com/images/q_auto,f_auto/redbullcom/2020/4/19/nqw39ds7xpeuvcz5ifdz/jett-valorant'" class="botoncito">Solicitar</button>
-                    </td>  
+                        <button type="button" class="botoncito" data-bs-toggle="modal" data-bs-target="#SinCapacitacion" data-bs-whatever="Ulti Jett">Solicitar</button>                    </td>  
                 </tr>
                 <tr>
                     <td>Manos pal valorant</td>
                     <td>No disponible</td>
                     <td>0</td>
                     <td>
-                        <button onclick="location.href='https://cdn.memegenerator.es/imagenes/memes/thumb/2/98/2988227.jpg'" class="botoncito">Solicitar</button>
+                        <button type="button" class="botoncito" data-bs-toggle="modal" data-bs-target="#NoDisponible" data-bs-whatever="Manos pal valorant">Solicitar</button>
                     </td>  
                 </tr>
             </tbody>
@@ -81,11 +78,173 @@
         </table>
     </div>
 
+
+    <div class="modal fade" id="ModalFormulario" tabindex="-1" aria-labelledby="ModalFormularioLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalFormularioLabel">New message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Nombre del Solicitante:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Herramienta a Solicitar:</label>
+                            <input type="text" class="form-control" id="recipient-name" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Fecha:</label>
+                            <textarea class="form-control" id="message-text" placeholder="dd/mm/aa"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Horario de Inicio:</label>
+                            <textarea class="form-control" id="message-text" placeholder="hh:mm"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Horario de Termino:</label>
+                            <textarea class="form-control" id="message-text" placeholder="hh:mm"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Material Usado:</label>
+                            <input class="form-control" list="datalistMaterial" id="exampleDataList" placeholder="Seleccione un material, o escribalo si no lo encuentra.">
+                            <datalist id="datalistMaterial">
+                                <option value="PLA">
+                                <option value="TPU">
+                                <option value="PETG">
+                                <option value="MDF">
+                                <option value="Acrilico">
+                                <option value="Terciado">
+                                <option value="Aluminio">
+                                <option value="PCB Fibra">
+                            </datalist>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Quién facilitó el Material:</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Seleccione una de las opciones</option>
+                                <option value="1">El FabLab</option>
+                                <option value="2">El Solicitante</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Especificar cantidad material:</label>
+                            <textarea class="form-control" id="message-text" placeholder="Si el material fue facilitado por el solicitante, dejar en blanco"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Motivo de Uso:</label>
+                            <input class="form-control" list="datalistMotivos" id="exampleDataList" placeholder="Seleccione un motivo, o escribalo si no lo encuentra.">
+                            <datalist id="datalistMotivos">
+                                <option value="Estudiante/Proyecto Inscrito FabLab">
+                                <option value="Estudiante/Por Asignatura">
+                                <option value="Estudiante/Uso Personal/Evento">
+                                <option value="Profesor/Investigación/Fondo Concursable">
+                                <option value="Profesor/Investigación/Sin Financiamiento">
+                                <option value="Profesor/Académico/Financiado por Depto">
+                                <option value="Profesor/Uso Personal/Evento">
+                                <option value="Funcionario/Financiado por Unidad-Depto">
+                                <option value="Funcionario/Uso Personal/Evento">
+                                <option value="Empresa/3IE">
+                                <option value="Empresa/Pyme">
+                                <option value="Empresa/Gran Empresa">
+                                <option value="Interno/Mantenimiento">
+                                <option value="Interno/Publicidad">
+                                <option value="Interno/Capacitación/USM">
+                                <option value="Interno/Capacitación/Externos">
+                                <option value="Interno/Desarrollo">
+                                <option value="Interno/Evento">
+                                <option value="Externo/Membresia">
+                                <option value="Interno/Trabajo remunerado">
+                            </datalist>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="botoncito" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="botoncito" data-bs-target="#SolicitudEnviada" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar Solicitud</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="SolicitudEnviada" aria-hidden="true" aria-labelledby="SolicitudEnviadaLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="SolicitudEnviadaLabel">Notificación de Solicitud</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Su solicitud se ha enviado con éxito!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="botoncito"  data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="NoDisponible" aria-hidden="true" aria-labelledby="NoDisponibleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="NoDisponibleLabel">Aviso!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Lamentablemente, esta herramienta no se encuentra disponible.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="botoncito"  data-bs-dismiss="modal">Puta la wea ya</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="SinCapacitacion" aria-hidden="true" aria-labelledby="SinCapacitacionLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="SinCapacitacionLabel">Aviso!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Lamentablemente, no te encuentras capacitado para utilizar esta herramienta, visita nuestras opciones de capacitacion.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="botoncito"  data-bs-dismiss="modal">Que paja</button>
+                    <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'" type="button" class="botoncito"  data-bs-dismiss="modal">Weno</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var ModalFormulario = document.getElementById('ModalFormulario')
+        ModalFormulario.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var recipient = button.getAttribute('data-bs-whatever')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var modalTitle = ModalFormulario.querySelector('.modal-title')
+            var modalBodyInput = ModalFormulario.querySelector('.modal-body input')
+
+            modalTitle.textContent = "Formulario de Solicitud"
+            modalBodyInput.value = recipient
+        })
+    </script>
+    
+
     <button onclick="location.href='index.html'" class="btn" style="width: 10%; padding: 0.4% ; font-size: 25px;">Volver</button>
     
-
-    
-
     
 
 </body>
