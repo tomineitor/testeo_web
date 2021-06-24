@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Capacitaciones</title>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+    <main>
+        <div class="header-img" style="box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.822);">
+            <div class="aligncenter">
+                <img src="https://i.imgur.com/zM2q4wE.png" style="height: 250px; position: relative; left: 30px;">
+                
+                <div alt = "RSS" style="position: relative; left: -760px;;">
+                    <a href="https://www.instagram.com/fablab_utfsm/" target="_blank">
+                        <img src="https://i.pinimg.com/originals/3b/21/c7/3b21c7efd2ba9c119fb8d361acacc31d.png" alt="Instagram" style="width: 42px; height: 42px; top: 10px;">
+                    </a>
+
+                    <a href="https://www.facebook.com/fablabusm" target="_blank">
+                        <img src="https://www.dpabogados.com/wp-content/uploads/2016/09/facebook-logo-png-transparent-background.png" alt="Instagram" style="width: 34px; height: 34px; top: 10px;">
+                    </a>
+
+                    <a href="https://twitter.com/fablab_utfsm" target="_blank">
+                        <img src="http://www.icorp.com.mx/blog/wp-content/uploads/2017/08/Logo-Twitter-png.png" alt="Instagram" style="width: 40px; height: 40px; top: 10px;">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <div>
+        <table class = "table table-hover table-bordered border-dark center" style="width:80%; margin-top:35px" >
+            <thead>
+                <tr class= "table-dark">
+                    <td>Herramienta</td>
+                    <td>Accion</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tutos para niños</td>
+                    <td>
+                        <button type="button" class="botoncito" data-bs-toggle="modal" data-bs-target="#ModalVideos">Videos de capacitación</button>
+                        <button type="button" class="botoncito">Examen de capacitación</button>                    
+                    </td>  
+                </tr>
+                <tr>
+                    <td>Ulti jett</td>
+                    <td>
+                        <button type="button" class="botoncito">Videos de capacitación</button>
+                        <button type="button" class="botoncito">Examen de capacitación</button>                    
+                    </td>  
+                </tr>
+                <tr>
+                    <td>Manos pal valorant</td>
+                    <td>
+                        <button type="button" class="botoncito">Videos de capacitación</button>
+                        <button type="button" class="botoncito">Examen de capacitación</button>
+                    </td>  
+                </tr>
+            </tbody>
+            
+        </table>
+    </div>
+
+    <div class="modal fade" id="ModalVideos" tabindex="-1" role="dialog" aria-labelledby="ModalVideosLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Videos de capacitación</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=0YF8vecQWYs&ab_channel=%E7%BE%8E%E6%B3%A2'" type="button" class="botoncito2">Introducción</button>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=nyRE93zvqVM&ab_channel=BarquitodeVapor'" type="button" class="botoncito2">Calibración</button>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=PMattoFX_Gw&ab_channel=SanatorioAllende'" type="button" class="botoncito2">Uso general 1</button>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=Hu3il_TXSOQ&ab_channel=DiscoEveryChannel'" type="button" class="botoncito2">Uso general 2</button>
+                <button onclick="window.location.href='https://www.youtube.com/watch?v=pW4mfecjPpk&ab_channel=LisaCoraz%C3%B3ndeLe%C3%B3n'" type="button" class="botoncito2">Apagado</button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="botoncito" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <button onclick="location.href='index.html'" class="btn" style="width: 10%; padding: 0.4% ; font-size: 25px;">Volver</button>
+</body>
+</html>
