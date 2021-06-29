@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +13,11 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/video_modal.js"></script>
+
+
 </head>
+
 <body>
     <main>
         <div class="header-img" style="box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.822);">
@@ -37,64 +42,111 @@
         </div>
     </main>
 
+    <h1>Capacitaciones</h1>
+
     <div>
         <table class = "table table-hover table-bordered border-dark center" style="width:80%; margin-top:35px" >
             <thead>
                 <tr class= "table-dark">
                     <td>Herramienta</td>
-                    <td>Accion</td>
+                    <td>Opciones</td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Tutos para niños</td>
-                    <td>
-                        <button type="button" class="botoncito" data-bs-toggle="modal" data-bs-target="#ModalVideos">Videos de capacitación</button>
-                        <button type="button" class="botoncito">Examen de capacitación</button>                    
-                    </td>  
+                    <td>Herramienta 1</td>
+                    <td class="text-center align-middle">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#ModalVideos" data-bs-whatever="Herramienta 1">Ver Videos</button>
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#PorImplementar" >Tomar Examen</button>
+                        </div>
+                    </td>   
                 </tr>
                 <tr>
-                    <td>Ulti jett</td>
-                    <td>
-                        <button type="button" class="botoncito">Videos de capacitación</button>
-                        <button type="button" class="botoncito">Examen de capacitación</button>                    
-                    </td>  
+                    <td>Herramienta 2</td>
+                    <td class="text-center align-middle">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#ModalVideos" data-bs-whatever="Herramienta 2">Ver Videos</button>
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#PorImplementar" >Tomar Examen</button>
+                        </div>
+                    </td>   
                 </tr>
                 <tr>
-                    <td>Manos pal valorant</td>
-                    <td>
-                        <button type="button" class="botoncito">Videos de capacitación</button>
-                        <button type="button" class="botoncito">Examen de capacitación</button>
-                    </td>  
+                    <td>Herramienta 3</td>
+                    <td class="text-center align-middle">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#ModalVideos" data-bs-whatever="Herramienta 3">Ver Videos</button>
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#PorImplementar" >Tomar Examen</button>
+                        </div>
+                    </td>   
+                </tr>
+                <tr>
+                    <td>Herramienta 4</td>
+                    <td class="text-center align-middle">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#ModalVideos" data-bs-whatever="Herramienta 4">Ver Videos</button>
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#PorImplementar" >Tomar Examen</button>
+                        </div>
+                    </td>   
                 </tr>
             </tbody>
             
         </table>
     </div>
 
-    <div class="modal fade" id="ModalVideos" tabindex="-1" role="dialog" aria-labelledby="ModalVideosLabel" aria-hidden="true">
+    <div class="modal fade" id="ModalVideos" aria-hidden="true" aria-labelledby="ModalVideosLabel" tabindex="-1">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Videos de capacitación</h5>
-              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Videos de capacitación</h5>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="botoncito2" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#VideoModal" data-src="https://www.youtube.com/embed/0YF8vecQWYs">Introduccion</button>
+                    <button type="button" class="botoncito2" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#VideoModal" data-src="https://www.youtube.com/embed/nyRE93zvqVM">Calibracion</button>
+                    <button type="button" class="botoncito2" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#VideoModal" data-src="https://www.youtube.com/embed/PMattoFX_Gw">Uso General 1</button>
+                    <button type="button" class="botoncito2" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#VideoModal" data-src="https://www.youtube.com/embed/Hu3il_TXSOQ">Uso General 2</button>
+                    <button type="button" class="botoncito2" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#VideoModal" data-src="https://www.youtube.com/embed/pW4mfecjPpk">Apagado</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="botoncito" data-bs-dismiss="modal">Cerrar</button>
+                </div>
             </div>
-            <div class="modal-body">
-                <button onclick="window.location.href='https://www.youtube.com/watch?v=0YF8vecQWYs&ab_channel=%E7%BE%8E%E6%B3%A2'" type="button" class="botoncito2">Introducción</button>
-                <button onclick="window.location.href='https://www.youtube.com/watch?v=nyRE93zvqVM&ab_channel=BarquitodeVapor'" type="button" class="botoncito2">Calibración</button>
-                <button onclick="window.location.href='https://www.youtube.com/watch?v=PMattoFX_Gw&ab_channel=SanatorioAllende'" type="button" class="botoncito2">Uso general 1</button>
-                <button onclick="window.location.href='https://www.youtube.com/watch?v=Hu3il_TXSOQ&ab_channel=DiscoEveryChannel'" type="button" class="botoncito2">Uso general 2</button>
-                <button onclick="window.location.href='https://www.youtube.com/watch?v=pW4mfecjPpk&ab_channel=LisaCoraz%C3%B3ndeLe%C3%B3n'" type="button" class="botoncito2">Apagado</button>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="botoncito" data-bs-dismiss="modal">Cerrar</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
+
+    <div class="modal fade" id="PorImplementar" aria-hidden="true" aria-labelledby="PorImplementarLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="PorImplementarLabel">Aviso!</h5>
+                    
+                </div>
+                <div class="modal-body">
+                    Esta funcion todavia no se implementa
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="botoncito"  data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <button onclick="location.href='index.html'" class="btn" style="width: 10%; padding: 0.4% ; font-size: 25px;">Volver</button>
+
+    <div class="modal fade" id="VideoModal" aria-labelledby="VideoModalLabel" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <h5 class="modal-title" id="VideoModalLabel">Video de Capacitacion</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center align-middle">
+                        <iframe class="embed-responsive-item" src="" id="video" width="800" height="600" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

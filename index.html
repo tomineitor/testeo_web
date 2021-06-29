@@ -10,6 +10,9 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Proyecto ISW Inicio</title>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     
 </head>
 
@@ -42,7 +45,7 @@
         <div class="card mb-3" style="background-color:#DDDDDD; border: none; margin-top: 3%">
             <div class="row g-0 align-items-center">
                 <div class="col-md-4">
-                    <button class="btn">Proyectos</button>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#PorImplementar" >Proyectos</button>
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -76,8 +79,8 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <p class="card-text" style="font-size: 20px;">Aqui se encuentran todos los
-                        cursos de capacitacion de las herramientas, puedes acceder a ellos y tambien a las evaluaciones para capacitarte en la herramienta seleccionada, ademas de saber
-                        que cursos tienes aprobados.</p>
+                        cursos de capacitacion de las herramientas, puedes acceder a ellos y tambien a las evaluaciones para capacitarte en 
+                        la herramienta seleccionada, ademas de saber que cursos tienes aprobados.</p>
                     </div>
                 </div>
             </div>
@@ -87,15 +90,38 @@
             <div class="row g-0 align-items-center">
                 <div class="col-md-8">
                     <div class="card-body">
-                        <p class="card-text" style="font-size: 20px;">-Aqui hay que insertar algo-</p>
+                        <p class="card-text" style="font-size: 20px;">Aqui podras ver informacion respecto a tu cuenta y configurar ciertos parametros.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <button onclick="location.href='https://www.google.com/search?q=tutos&rlz=1C1CHBF_esCL871CL871&sxsrf=ALeKk02EcTNaffTOJianGPIERCzqqHN92g:1623793761286&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi1wtGSz5rxAhV2ILkGHXk0AIEQ_AUoAXoECAEQAw&biw=1920&bih=937'" class="btn">Tutos(temporal)</button>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#PorImplementar" >Perfil</button>
                 </div>
             </div>
         </div>
 
+    </div>
+
+    <div style="width: 20%; padding: 1.5%;">
+        <button type="button" class="botoncito" data-bs-toggle="modal" data-bs-target="#PorImplementar" >Soporte/Contacto</button>
+    </div>
+
+
+
+    <div class="modal fade" id="PorImplementar" aria-hidden="true" aria-labelledby="PorImplementarLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="PorImplementarLabel">Aviso!</h5>
+                    
+                </div>
+                <div class="modal-body">
+                    Esta funcion todavia no se implementa
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="botoncito"  data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>

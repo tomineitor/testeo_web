@@ -39,6 +39,22 @@ body{
     margin: auto;
     display: block;
     border-radius: 10px;
+    white-space: nowrap;
+    
+}
+
+.botoncito_alt{
+
+    color:white;
+    background-color: #1c455c;
+    text-align: center;
+    font-size: 15px;
+    padding: 2% 2%;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+    white-space: nowrap;
+    min-width: 150px;
     
 }
 

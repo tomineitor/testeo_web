@@ -40,41 +40,64 @@
         </div>
     </main>
 
+    <h1>Herramientas</h1>
+
     <div>
-        <table class = "table table-hover table-bordered border-dark center" style="width:80%; margin-top:35px" >
+        <table class = "table table-hover table-bordered border-dark center" style="width:85%; margin-top:35px" >
             <thead>
                 <tr class= "table-dark">
                     <td>Nombre Herramienta</td>
                     <td>Estado</td>
                     <td>Cantidad</td>
-                    <td>Accion</td>
+                    <td>Acciones</td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Tutos para niños</td>
+                    <td>Herramienta 1</td>
+                    <td>Disponible</td>
+                    <td>11</td>
+                    <td class="text-center align-middle">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#ModalFormulario" data-bs-whatever="Herramienta 1">Solicitar</button>
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#PorImplementar" >Ver Reportes</button>
+                        </div>
+                    </td>  
+                </tr>
+                <tr>
+                    <td>Herramienta 2</td>
                     <td>Disponible</td>
                     <td>27</td>
-                    <td>
-                        <button type="button" class="botoncito" data-bs-toggle="modal" data-bs-target="#ModalFormulario" data-bs-whatever="Tutos para niños">Solicitar</button>                    </td>  
+                    <td class="text-center align-middle">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#ModalFormulario" data-bs-whatever="Herramienta 2">Solicitar</button>
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#PorImplementar" >Ver Reportes</button>
+                        </div>
+                    </td>  
                 </tr>
                 <tr>
-                    <td>Ulti jett</td>
+                    <td>Herramienta 3</td>
                     <td>Disponible</td>
-                    <td>1</td>
-                    <td>
-                        <button type="button" class="botoncito" data-bs-toggle="modal" data-bs-target="#SinCapacitacion" data-bs-whatever="Ulti Jett">Solicitar</button>                    </td>  
+                    <td>3</td>
+                    <td class="text-center align-middle">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#SinCapacitacion" data-bs-whatever="Herramienta 3">Solicitar</button>
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#PorImplementar" >Ver Reportes</button>
+                        </div>
+                    </td>  
                 </tr>
                 <tr>
-                    <td>Manos pal valorant</td>
-                    <td>No disponible</td>
+                    <td>Herramienta 4</td>
+                    <td>No Disponible</td>
                     <td>0</td>
-                    <td>
-                        <button type="button" class="botoncito" data-bs-toggle="modal" data-bs-target="#NoDisponible" data-bs-whatever="Manos pal valorant">Solicitar</button>
+                    <td class="text-center align-middle">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#NoDisponible" data-bs-whatever="Herramienta 4">Solicitar</button>
+                            <button type="button" class="botoncito_alt" data-bs-toggle="modal" data-bs-target="#PorImplementar" >Ver Reportes</button>
+                        </div>
                     </td>  
                 </tr>
             </tbody>
-            
         </table>
     </div>
 
@@ -198,7 +221,7 @@
                     Lamentablemente, esta herramienta no se encuentra disponible.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="botoncito"  data-bs-dismiss="modal">Puta la wea ya</button>
+                    <button type="button" class="botoncito"  data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -215,8 +238,25 @@
                     Lamentablemente, no te encuentras capacitado para utilizar esta herramienta, visita nuestras opciones de capacitacion.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="botoncito"  data-bs-dismiss="modal">Que paja</button>
-                    <button onclick="window.location.href='capacitaciones.html'" type="button" class="botoncito"  data-bs-dismiss="modal">Weno</button>
+                    <button type="button" class="botoncito"  data-bs-dismiss="modal">Cerrar</button>
+                    <button onclick="window.location.href='capacitaciones.html'" type="button" class="botoncito"  data-bs-dismiss="modal">Ver capacitaciones</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="PorImplementar" aria-hidden="true" aria-labelledby="PorImplementarLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="PorImplementarLabel">Aviso!</h5>
+                    
+                </div>
+                <div class="modal-body">
+                    Esta funcion todavia no se implementa
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="botoncito"  data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
